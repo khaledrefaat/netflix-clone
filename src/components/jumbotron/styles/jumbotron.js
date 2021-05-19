@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
-// 1000px
-const bp1000 = 62.5;
+
+const bp950 = 59.375;
 const bp600 = 37.5;
 
 export const Item = styled.div`
@@ -10,7 +10,7 @@ export const Item = styled.div`
   color: white;
   overflow: hidden;
 
-  @media only screen and (min-width: ${bp1000}em) {
+  @media only screen and (min-width: ${bp950}em) {
     flex-direction: ${({ direction }) => direction};
   }
 `;
@@ -24,13 +24,13 @@ export const Inner = styled.div`
   width: 100%;
   max-width: 110rem;
 
-  @media only screen and (min-width: ${bp1000}em) {
+  @media only screen and (min-width: ${bp950}em) {
     flex-direction: ${({ direction }) => direction};
   }
 `;
 
 export const Container = styled.div`
-  @media only screen and (min-width: ${bp1000}em) {
+  @media only screen and (min-width: ${bp950}em) {
     ${Item}:last-of-type h2 {
       margin-bottom: 5rem;
     }
@@ -42,7 +42,7 @@ export const Pane = styled.div`
   padding: 4.5rem;
   text-align: center;
 
-  @media only screen and (min-width: ${bp1000}em) {
+  @media only screen and (min-width: ${bp950}em) {
     width: 50%;
     padding: 0;
   }
