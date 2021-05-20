@@ -73,12 +73,18 @@ export const Image = styled.img`
 export const VideoContainer = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 73%;
+  max-width: 65%;
   max-height: 54%;
   position: absolute;
   top: 46%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
+
+  @media only screen and (min-width: ${bp950}em) {
+    max-width: 73%;
+    max-height: 54%;
+    left: 50%;
+  }
 `;
 
 export const Video = styled.video`
@@ -94,9 +100,20 @@ export const Container = styled.div`
   }
 
   // targting last video
-  ${Item}:last-of-type ${VideoContainer} {
-    max-width: 63%;
-    max-height: 47%;
-    top: 34%;
+  ${Item}:not(:first-of-type) ${VideoContainer} {
+    max-width: 50%;
+    max-height: 40%;
+    top: 40%;
+
+    @media only screen and (min-width: 25em) {
+      max-width: 55%;
+      max-height: 40%;
+    }
+
+    @media only screen and (min-width: ${bp950}em) {
+      max-width: 63%;
+      max-height: 47%;
+      top: 34%;
+    }
   }
 `;
