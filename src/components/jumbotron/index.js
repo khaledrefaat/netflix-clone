@@ -7,6 +7,8 @@ import {
   Title,
   SubTitle,
   Image,
+  VideoContainer,
+  Video,
 } from './styles/jumbotron';
 
 const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
@@ -35,6 +37,21 @@ Jumbotron.SubTitle = function jumbotronSubTitle({ children, ...restProps }) {
 
 Jumbotron.Image = function jumbotronImage({ children, ...restProps }) {
   return <Image {...restProps} />;
+};
+
+Jumbotron.VideoContainer = function jumbotronVideoContainer({
+  children,
+  ...restProps
+}) {
+  return <VideoContainer {...restProps}>{children}</VideoContainer>;
+};
+
+Jumbotron.Video = function jumbotronVideo({ children, ...restProps }) {
+  return (
+    <Video {...restProps}>
+      {children}
+    </Video>
+  );
 };
 
 export default Jumbotron;

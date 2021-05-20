@@ -29,18 +29,11 @@ export const Inner = styled.div`
   }
 `;
 
-export const Container = styled.div`
-  @media only screen and (min-width: ${bp950}em) {
-    ${Item}:last-of-type h2 {
-      margin-bottom: 5rem;
-    }
-  }
-`;
-
 export const Pane = styled.div`
   width: 100%;
   padding: 4.5rem;
   text-align: center;
+  position: relative;
 
   @media only screen and (min-width: ${bp950}em) {
     width: 50%;
@@ -73,4 +66,37 @@ export const SubTitle = styled.h2`
 export const Image = styled.img`
   max-width: 100%;
   height: auto;
+  position: relative;
+  z-index: 2;
+`;
+
+export const VideoContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const Video = styled.video`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Container = styled.div`
+  @media only screen and (min-width: ${bp950}em) {
+    ${Item}:last-of-type h2 {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // targting last video
+  ${Item}:last-of-type ${VideoContainer} {
+    max-width: 63%;
+    max-height: 47%;
+    top: 34%;
+  }
 `;
