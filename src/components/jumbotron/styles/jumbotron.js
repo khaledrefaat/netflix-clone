@@ -101,7 +101,7 @@ export const Container = styled.div`
 
   // targting last video
   ${Item}:not(:first-of-type) ${VideoContainer} {
-    max-width: 50%;
+    max-width: 49%;
     max-height: 40%;
     top: 40%;
 
